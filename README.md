@@ -1,14 +1,27 @@
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:312e81,100:0891b2&height=170&section=header&text=HASHLAB&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Plaintext%20%E2%86%92%20Hash%20%E2%86%92%20Plaintext&descSize=16&descAlignY=60" alt="HASHLAB banner" width="100%" />
+
+[![Typing](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&lines=21+hashes+in+single-file+C;Plaintext+%E2%86%92+hash+in+one+pick;Crack+hash+%E2%86%92+plaintext+with+threads;Flip+1+char+%E2%80%94+digest+explodes)](https://github.com/BhavyaDudhatra/Hash-algorithms-using-C-language)
+
+<img src="./assets/hash-flow.svg" alt="Animated: hello to SHA-256 digest, avalanche effect, and brute-force progress" width="100%" />
+
+[![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)](./main.c)
+[![Algorithms](https://img.shields.io/badge/Algorithms-21-0891b2?style=flat-square)](./docs/ALGORITHMS.md)
+[![SHA2](https://img.shields.io/badge/SHA--2-34d399?style=flat-square)](./docs/ALGORITHMS.md)
+[![SHA3](https://img.shields.io/badge/SHA--3-a78bfa?style=flat-square)](./docs/ALGORITHMS.md)
+[![BLAKE](https://img.shields.io/badge/BLAKE-f472b6?style=flat-square)](./docs/ALGORITHMS.md)
+[![Whirlpool](https://img.shields.io/badge/Whirlpool-fbbf24?style=flat-square)](./docs/ALGORITHMS.md)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](./LICENSE)
+
+</div>
+
 # Hash Algorithms in C
 
 Single-file C program with two modes:
 
 1. **Plaintext → hash** — hash a string with any of 21 algorithms.
 2. **Hash → plaintext** — brute-force a hash back to its plaintext.
-
-[![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)](./main.c)
-[![Algorithms](https://img.shields.io/badge/Algorithms-21-0891b2?style=flat-square)](./docs/ALGORITHMS.md)
-[![Platform](https://img.shields.io/badge/Windows_Linux-CLI-0f172a?style=flat-square)](./Makefile)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](./LICENSE)
 
 ## Supported algorithms
 
@@ -92,3 +105,9 @@ Avalanche effect (`MD5`):
 ## License
 
 MIT — see [`LICENSE`](./LICENSE).
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:312e81,100:0891b2&height=110&section=footer" width="100%" alt="footer wave" />
+
+</div>

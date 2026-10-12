@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" font-family="Consolas, 'Fira Code', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="420" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="798" height="418" rx="17" fill="none" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- hex rain columns -->
+  <g font-size="13" text-anchor="middle" opacity="0.5">
+    <text x="40" y="0" fill="#22d3ee">a 3 f 9 c 0 b 7<animateTransform attributeName="transform" type="translate" from="0 -60" to="0 480" dur="7s" repeatCount="indefinite"/></text>
+    <text x="110" y="0" fill="#34d399">5 d e 2 8 1 f 4<animateTransform attributeName="transform" type="translate" from="0 -140" to="0 480" dur="9s" repeatCount="indefinite"/></text>
+    <text x="190" y="0" fill="#f472b6">9 0 b 6 d 3 a c<animateTransform attributeName="transform" type="translate" from="0 -40" to="0 480" dur="6s" repeatCount="indefinite"/></text>
+    <text x="270" y="0" fill="#fbbf24">c 7 1 e 4 9 0 d<animateTransform attributeName="transform" type="translate" from="0 -200" to="0 480" dur="11s" repeatCount="indefinite"/></text>
+    <text x="350" y="0" fill="#22d3ee">2 b 8 0 f 5 7 a<animateTransform attributeName="transform" type="translate" from="0 -90" to="0 480" dur="8s" repeatCount="indefinite"/></text>
+    <text x="430" y="0" fill="#a78bfa">e 4 c 1 9 6 b 2<animateTransform attributeName="transform" type="translate" from="0 -170" to="0 480" dur="10s" repeatCount="indefinite"/></text>
+    <text x="510" y="0" fill="#34d399">7 a 0 5 f c 3 8<animateTransform attributeName="transform" type="translate" from="0 -60" to="0 480" dur="7.5s" repeatCount="indefinite"/></text>
+    <text x="590" y="0" fill="#f472b6">1 f 6 d 2 b 9 e<animateTransform attributeName="transform" type="translate" from="0 -120" to="0 480" dur="8.5s" repeatCount="indefinite"/></text>
+    <text x="670" y="0" fill="#22d3ee">d 8 3 a 7 0 5 b<animateTransform attributeName="transform" type="translate" from="0 -200" to="0 480" dur="12s" repeatCount="indefinite"/></text>
+    <text x="745" y="0" fill="#fbbf24">0 c 9 e 1 a 4 6<animateTransform attributeName="transform" type="translate" from="0 -80" to="0 480" dur="7s" repeatCount="indefinite"/></text>
+  </g>
+  <rect width="800" height="420" rx="18" fill="#0f172a" opacity="0.55"/>
+
+  <!-- title -->
+  <text x="400" y="52" text-anchor="middle" font-size="40" font-weight="bold" letter-spacing="8" fill="url(#titleGrad)" filter="url(#glow)">HASHLAB</text>
+  <text x="400" y="76" text-anchor="middle" font-size="14" letter-spacing="3" fill="#e2e8f0">Plaintext &#8594; Hash &#8594; Plaintext
+    <animate attributeName="opacity" values="1;0.55;1" dur="2.4s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- flow boxes -->
+  <g>
+    <rect x="40" y="100" width="180" height="92" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="130" y="122" text-anchor="middle" font-size="11" letter-spacing="2" fill="#22d3ee">PLAINTEXT</text>
+    <text x="130" y="158" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">"hello"<animate attributeName="opacity" values="1;1;0.6;1" dur="3s" repeatCount="indefinite"/></text>
+    <rect x="196" y="144" width="10" height="22" fill="#22d3ee"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
+
+    <!-- arrow 1 -->
+    <line x1="230" y1="146" x2="296" y2="146" stroke="#34d399" stroke-width="3" stroke-dasharray="10 8">
+      <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="1.2s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="296,138 310,146 296,154" fill="#34d399"/>
+
+    <rect x="312" y="100" width="176" height="92" rx="12" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+    <text x="400" y="122" text-anchor="middle" font-size="11" letter-spacing="2" fill="#a78bfa">SHA-256 ENGINE</text>
+    <g fill="none" stroke-width="3">
+      <circle cx="372" cy="156" r="14" stroke="#22d3ee" stroke-dasharray="20 12">
+        <animateTransform attributeName="transform" type="rotate" from="0 372 156" to="360 372 156" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="428" cy="156" r="14" stroke="#f472b6" stroke-dasharray="20 12">
+        <animateTransform attributeName="transform" type="rotate" from="360 428 156" to="0 428 156" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <text x="400" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">MD5&#183;SHA&#183;BLAKE</text>
+    <text x="400" y="179" text-anchor="middle" font-size="10" fill="#34d399">&#9679; hashing &#9679;<animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></text>
+
+    <!-- arrow 2 -->
+    <line x1="498" y1="146" x2="564" y2="146" stroke="#f472b6" stroke-width="3" stroke-dasharray="10 8">
+      <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="1.2s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="564,138 578,146 564,154" fill="#f472b6"/>
+
+    <rect x="580" y="100" width="180" height="92" rx="12" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+    <text x="670" y="122" text-anchor="middle" font-size="11" letter-spacing="2" fill="#f472b6">DIGEST &#183; 64 HEX</text>
+    <text x="670" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#fbbf24">2cf24dba5fb0a30e<animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/></text>
+    <text x="670" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#22d3ee">26e83b2ac5b9e29e…<animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- avalanche demo -->
+  <g font-size="13">
+    <rect x="40" y="208" width="720" height="104" rx="12" fill="#000000" opacity="0.45"/>
+    <rect x="40" y="208" width="720" height="104" rx="12" fill="none" stroke="#fbbf24" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="60" y="232" font-size="11" letter-spacing="2" fill="#fbbf24">AVALANCHE &#8212; FLIP 1 CHAR, DIGEST EXPLODES</text>
+    <text x="60" y="258" fill="#e2e8f0">hello &#8594; <tspan fill="#22d3ee" font-weight="bold">5d41402abc4b2a76b9719d911017c592</tspan></text>
+    <text x="60" y="284" fill="#e2e8f0">hell0 &#8594; <tspan fill="#f472b6" font-weight="bold">0945d6165dcab0fd5120e7a0d651f8fe</tspan>
+      <animate attributeName="opacity" values="1;0.55;1" dur="1.8s" repeatCount="indefinite"/>
+    </text>
+    <rect x="596" y="244" width="144" height="20" rx="5" fill="#f472b6" opacity="0.25">
+      <animate attributeName="opacity" values="0.1;0.5;0.1" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="60" y="304" font-size="11" fill="#94a3b8">1-bit input change &#8776; 50% output bits flip &#8212; why hashes detect tampering</text>
+  </g>
+
+  <!-- crack progress bar -->
+  <g>
+    <text x="60" y="340" font-size="11" letter-spacing="2" fill="#34d399">BRUTE-FORCE &#8212; HASH &#8594; PLAINTEXT</text>
+    <text x="740" y="340" text-anchor="end" font-size="12" fill="#e2e8f0">"hi" found in 8106 tries &#10003;
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <rect x="40" y="350" width="720" height="18" rx="9" fill="#000000" opacity="0.55"/>
+    <rect x="40" y="350" width="720" height="18" rx="9" fill="none" stroke="#34d399" stroke-opacity="0.6"/>
+    <rect x="43" y="353" width="200" height="12" rx="6" fill="url(#barGrad)">
+      <animate attributeName="width" values="40;714;40" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="400" y="396" text-anchor="middle" font-size="12" letter-spacing="1" fill="#e2e8f0">21 algorithms &#183; single-file C &#183; zero dependencies &#183; ascii 32–127 &#215; lengths 1–10</text>
+  </g>
+</svg>
