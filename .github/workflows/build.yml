@@ -1,0 +1,28 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with gcc
+        run: gcc -O2 -Wall -Wextra -o hasher.exe main.c
+      - name: Smoke test (SHA-256 of "hello")
+        shell: pwsh
+        run: |
+          $out = "1`nhello`n4`n3" | & ./hasher.exe
+          $out | Write-Output
+          if ($out -notmatch "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824") { throw "hash mismatch" }
+
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with gcc
+        run: make linux
+      - name: Smoke test (SHA-256 of "hello")
+        run: printf '1\nhello\n4\n3\n' | ./hasher | grep -q '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824' && echo HASH_OK

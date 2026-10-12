@@ -1,0 +1,94 @@
+============================================
+ Hasher - Main Menu
+============================================
+  1. Plain text to hash
+  2. Find plain text from hash (brute force)
+  3. Exit
+Choice: 1
+Enter plain text string: hello
+
+Select a hash algorithm:
+   1. MD5
+   2. SHA-1
+   3. SHA-224
+   4. SHA-256
+   5. SHA-384
+   6. SHA-512
+   7. SHA-512/224
+   8. SHA-512/256
+   9. SHA3-224
+  10. SHA3-256
+  11. SHA3-384
+  12. SHA3-512
+  13. SHAKE128
+  14. SHAKE256
+  15. BLAKE2b
+  16. BLAKE2s
+  17. BLAKE3
+  18. RIPEMD-160
+  19. Whirlpool
+  20. CRC32
+  21. CRC64
+Choice: 4
+
+============================================
+ Hash result for plain text
+============================================
+ Plain Text : "hello"
+============================================
+
+  SHA-256         : 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+============================================
+
+============================================
+ Hasher - Main Menu
+============================================
+  1. Plain text to hash
+  2. Find plain text from hash (brute force)
+  3. Exit
+Choice: 2
+Enter hash value: 8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4
+
+Select a hash algorithm:
+   1. MD5
+   2. SHA-1
+   3. SHA-224
+   4. SHA-256
+  (… same menu …)
+Choice: 4
+
+Cracking with SHA-256 (printable ASCII 32-127, length 1-10)
+Splitting the search space across 12 threads, 4096 candidates per work item.
+Trying length 1...
+Trying length 2...
+
+============================================
+ Match found
+============================================
+ Plain Text : "hi"
+ Algorithm  : SHA-256
+ Hash       : 8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4
+ Threads    : 12
+ Attempts   : 8106
+============================================
+
+============================================
+ Hasher - Main Menu
+============================================
+  1. Plain text to hash
+  2. Find plain text from hash (brute force)
+  3. Exit
+Choice: 3
+Goodbye.
+
+---
+How this transcript was made (Windows, MinGW gcc 6.3.0):
+
+  gcc -O2 -o hasher.exe main.c
+  echo 1, hello, 4, then 2, <sha256-of-hi>, 4, then 3 | piped into hasher.exe
+
+Try your own (only short strings you created):
+
+  1 → a   → 1 (MD5)       → 0cc175b9c0f1b6a831c399e269772661
+  1 → abc → 4 (SHA-256)   → ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+  2 → paste either hash back → same algorithm → watch it find "a" / "abc"
